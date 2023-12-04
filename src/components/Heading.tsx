@@ -3,18 +3,18 @@ import Link from "next/link";
 interface Heading {
   label: string;
   href: string;
+  children?: React.ReactNode;
 }
 
-export default function Heading({ label, href }: Heading) {
+export default function Heading({ label, href, children }: Heading) {
   return (
     <div className="fixed top-0 left-0 flex items-end w-full h-[6.125rem] bg-[#FCEDB3]">
-      <div className="flex h-16">
+      <div className="flex h-16 w-full">
         <Link className="pl-8 pr-5 h-full flex items-center" href={href}>
           <BackArrow />
         </Link>
-        <div className="text-textPrimary text-[1.125rem] flex items-center" >
-          {label}
-        </div>
+        <div className="text-textPrimary grow text-[1.125rem] flex items-center">{label}</div>
+        <div className="y-full flex items-center pr-5">{children}</div>
       </div>
     </div>
   );

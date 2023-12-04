@@ -31,6 +31,7 @@ export default function PanelButton({
     <Link
       {...props}
       href={href}
+      scroll={false}
       className={
         "text-[1.25rem] flex items-center justify-center " +
         (highlight ? yellow : white) +

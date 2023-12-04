@@ -3,10 +3,12 @@ import PanelButton from "@/components/PanelButton";
 import QuestionMark from "@/components/icons/QuestionMark";
 import SelectBudget from "./SelectBudget";
 import ProgressDots from "../ProgressDots";
+import Heading from "@/components/Heading";
 
 export default function Budget() {
   return (
     <>
+      <Heading label="New Outing" href="/dashboard" />
       <div className="flex flex-col w-panelWidth mt-6">
         <h1 className="mt-[-0.25rem] font-RubikMedium text-[1.5rem] flex items-center gap-3">
           Budget

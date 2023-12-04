@@ -14,7 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <div className="fixed w-full flex justify-center z-20">
           <div className="relative w-[23.438rem] h-[2.75rem]">
-            <Image priority fill src="/Status-Bar.png" alt="phone status bar" />
+            <Image priority fill sizes="23.438rem" src="/Status-Bar.png" alt="phone status bar" />
           </div>
         </div>
         {children}

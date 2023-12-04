@@ -29,6 +29,7 @@ export default function FriendListItem({
           className="rounded-full max-h-10"
           src={profilePicture}
           fill
+          sizes="2.5rem"
           alt="friend profile picture"
         />
       </div>

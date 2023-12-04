@@ -60,6 +60,7 @@ export default function CircleProgress({
       <Image
         src={"/OutingProgressShadow.png"}
         fill
+        sizes="4.375rem"
         alt="progress bar shadow"
         className="absolute top-0 mix-blend-multiply"
       />

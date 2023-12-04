@@ -8,12 +8,12 @@ import Buttons from "./Buttons";
 
 export default function Dashboard() {
   return (
-    <main className="fixed w-full h-full flex flex-col items-center">
+    <main className="relative w-full h-full flex flex-col items-center">
       <Mountains className={"z-0 absolute top-[16.813rem]"} />
       <div className="mt-[3.375rem] pr-5 text-base text-textPrimary w-full h-10 flex justify-end items-center gap-4">
         William Smith
         <div className="relative w-[2.5rem] h-[2.5rem]">
-          <Image src={"/Profile-Pic.png"} fill alt="profile picture" />
+          <Image src={"/Profile-Pic.png"} fill sizes="2.5rem" alt="profile picture" />
         </div>
       </div>
       <div className="flex flex-col w-panelWidth">
@@ -21,7 +21,7 @@ export default function Dashboard() {
         <h1 className="mt-[-0.25rem] font-RubikMedium text-[1.5rem] flex gap-3">
           Minneapolis, MN
           <div className="relative w-[2.25rem] h-[2.25rem]">
-            <Image src={"/Sunny-Icon.png"} fill alt="Sunny Icon" />
+            <Image src={"/Sunny-Icon.png"} fill sizes="2.25rem" alt="Sunny Icon" />
           </div>
         </h1>
       </div>
