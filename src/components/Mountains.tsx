@@ -1,12 +1,10 @@
-export default function Mountains({className} : {className:string}) {
+export default function Mountains({...props} : React.BaseHTMLAttributes<SVGElement>) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="428"
-      height="380"
       fill="none"
       viewBox="0 0 428 380"
-      className={className}
+      {...props}
     >
       <path
         fill="url(#paint0_linear_186_1440)"

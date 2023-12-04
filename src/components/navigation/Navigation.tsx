@@ -17,7 +17,7 @@ export default function Navigation() {
 
   if (exclude.includes(pathname)) return null;
   return (
-    <nav className={"flex fixed bottom-0 h-[78px] w-full " + white}>
+    <nav className={"flex fixed bottom-0 h-[78px] z-10 w-full " + white}>
       <NavButton href="/dashboard" label="Home" icon={<HomeIcon />} />
       <NavButton href="/dashboard" label="Facts" icon={<FactsIcon />} />
       <NavButton href="/dashboard" label="Steps" icon={<StepsIcon />} />

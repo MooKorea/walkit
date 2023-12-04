@@ -25,7 +25,7 @@ const config: Config = {
       },
       spacing: {
         buttonHeight: "59px",
-        panelWidth: "392px"
+        panelWidth: "calc(100vw - 2.5rem)"
       },
       boxShadow: {
         panel: "0px 4px 4px rgba(0, 0, 0, 0.25), 10px 17px 29.4px rgba(62, 37, 0, 0.6)",
