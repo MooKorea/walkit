@@ -40,7 +40,7 @@ export default function SelectBudget() {
       </div>
       <div className="flex mt-8 gap-4 text-textPrimary ">
         <Toggle toggle={toggle} setToggle={setToggle} />
-        I'm not spending
+        I&apos;m not spending
       </div>
     </Panel>
   );
