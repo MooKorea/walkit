@@ -16,7 +16,7 @@ export default function GeneratedMap() {
   }, []);
 
   return (
-    <Panel height="h-[559px] mt-[14px] " top>
+    <Panel height="h-[34.938rem] mt-[0.875rem] " top>
       <AnimatePresence>
         {isLoaded ? (
           <MapContainer />
@@ -26,7 +26,7 @@ export default function GeneratedMap() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
             key={"loader"}
-            className="text-textPrimary mt-[200px] flex flex-col justify-center items-center gap-4"
+            className="text-textPrimary mt-[12.5rem] flex flex-col justify-center items-center gap-4"
           >
             <div className="load-container">
               <div className="loader">Loading...</div>
@@ -48,11 +48,11 @@ function MapContainer() {
       className="w-full overflow-hidden"
     >
       <Map fullPath />
-      <NavigatorIcon className="absolute top-[120px] left-[100px]" />
-      <LocationMarker className="top-[270px] left-[55px]" />
-      <LocationMarker delay={1} className="top-[405px] left-[115px]" />
-      <LocationMarker delay={2} className="top-[290px] left-[250px]" />
-      <LocationMarker delay={3} className="top-[105px] left-[270px]" />
+      <NavigatorIcon className="absolute top-[7.5rem] left-[6.25rem]" />
+      <LocationMarker className="top-[16.875rem] left-[3.438rem]" />
+      <LocationMarker delay={1} className="top-[25.313rem] left-[7.188rem]" />
+      <LocationMarker delay={2} className="top-[18.125rem] left-[15.625rem]" />
+      <LocationMarker delay={3} className="top-[6.563rem] left-[16.875rem]" />
     </motion.div>
   );
 }

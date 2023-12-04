@@ -6,8 +6,8 @@ export default function Arrow({left = false}:Arrow) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="9"
-      height="17"
+      width="0.563rem"
+      height="1.063rem"
       fill="none"
       viewBox="0 0 9 17"
       style={left ? {transform: "rotate(180deg)"} : {}}

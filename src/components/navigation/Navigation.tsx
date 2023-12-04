@@ -13,11 +13,11 @@ export default function Navigation() {
   const pathname = usePathname();
 
   const white =
-    "before:rounded-t-[20px] before:bg-primary before:absolute before:h-full before:w-full before:shadow-panel ";
+    "before:rounded-t-[1.25rem] before:bg-primary before:absolute before:h-full before:w-full before:shadow-panel ";
 
   if (exclude.includes(pathname)) return null;
   return (
-    <nav className={"flex fixed bottom-0 h-[78px] z-10 w-full " + white}>
+    <nav className={"flex fixed bottom-0 h-[4.875rem] z-10 w-full " + white}>
       <NavButton href="/dashboard" label="Home" icon={<HomeIcon />} />
       <NavButton href="/dashboard" label="Facts" icon={<FactsIcon />} />
       <NavButton href="/dashboard" label="Steps" icon={<StepsIcon />} />
@@ -37,7 +37,7 @@ function NavButton({ href, label, icon }: NavButton) {
   return (
     <Link
       href={href}
-      className="pt-1 text-[14px] w-full relative flex flex-col justify-center gap-1 items-center"
+      className="pt-1 text-[0.875rem] w-full relative flex flex-col justify-center gap-1 items-center"
     >
       {icon}
       {label}

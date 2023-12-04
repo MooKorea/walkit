@@ -11,14 +11,14 @@ export default function Save() {
   return (
     <>
       <div className="flex flex-col w-panelWidth mt-6">
-        <h1 className="mt-[-4px] font-RubikMedium text-[24px] flex items-center gap-3">
+        <h1 className="mt-[-0.25rem] font-RubikMedium text-[1.5rem] flex items-center gap-3">
           Your Route
         </h1>
         Tap on stops for more details
       </div>
-      <div className="flex flex-col gap-[10px]">
+      <div className="flex flex-col gap-[0.625rem]">
         <GeneratedMap />
-        <div className="flex gap-[10px]">
+        <div className="flex gap-[0.625rem]">
           <PanelButton split left onClick={() => setModalOpen(true)}>
             Save for Later
           </PanelButton>

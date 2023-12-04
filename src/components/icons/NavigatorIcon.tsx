@@ -7,8 +7,8 @@ export default function NavigatorIcon({ noBg = false, className }: NavigatorIcon
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="46"
-      height="47"
+      width="2.875rem"
+      height="2.938rem"
       fill="none"
       viewBox="0 0 46 47"
       className={className}

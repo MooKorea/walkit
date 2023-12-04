@@ -12,7 +12,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
-        <div className="absolute w-full flex justify-center z-20">
+        <div className="fixed w-full flex justify-center z-20">
           <Image priority width={375} height={44} src="/Status-Bar.png" alt="phone status bar" />
         </div>
         {children}

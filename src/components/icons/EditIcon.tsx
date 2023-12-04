@@ -2,8 +2,8 @@ export default function EditIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="17"
-      height="17"
+      width="1.063rem"
+      height="1.063rem"
       fill="none"
       viewBox="0 0 17 17"
     >

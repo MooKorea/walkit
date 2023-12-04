@@ -28,10 +28,15 @@
   src: url("../fonts/Rubik-Bold.ttf");
 }
 
+html {
+  font-size: calc(3.6vw);
+}
+
 body {
+
   position: relative;
   font-family: "RubikRegular";
-  font-size: 16px;
+  font-size: 1rem;
   color: var(--textSecondary);
   background: radial-gradient(
     146.5% 119.76% at 7.71% 1.89%,
@@ -39,6 +44,8 @@ body {
     #fcffd9 46.23%,
     #dda9a2 100%
   );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   height: 100vh;
   width: 100vw;
 }
@@ -62,10 +69,10 @@ body {
 
 .loader {
   color: var(--textPrimary);
-  font-size: 10px;
+  font-size: 0.625rem;
   position: relative;
   text-indent: -9999em;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   -webkit-transform: translateZ(0);
   -ms-transform: translateZ(0);
   transform: translateZ(0);

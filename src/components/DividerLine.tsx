@@ -2,8 +2,8 @@ export default function DividerLine() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="346"
-      height="1"
+      width="21.625rem"
+      height="0.063rem"
       fill="none"
       viewBox="0 0 346 1"
     >

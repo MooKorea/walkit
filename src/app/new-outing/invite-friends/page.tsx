@@ -10,14 +10,14 @@ export default function InviteFriends() {
   return (
     <>
       <div className="flex flex-col w-panelWidth mt-6">
-        <h1 className="mt-[-4px] font-RubikMedium text-[24px] flex items-center gap-3">
+        <h1 className="mt-[-0.25rem] font-RubikMedium text-[1.5rem] flex items-center gap-3">
           Invite Friends
           <QuestionMark />
         </h1>
       </div>
-      <div className="flex flex-col gap-[10px]">
+      <div className="flex flex-col gap-[0.625rem]">
         <FriendsPanel />
-        <div className="flex gap-[10px]">
+        <div className="flex gap-[0.625rem]">
           <PanelButton split left href="/new-outing/budget">
             <Arrow left />
             Previous
@@ -34,7 +34,7 @@ export default function InviteFriends() {
 
 function FriendsPanel() {
   return (
-    <Panel height="h-[536px] mt-[14px] " top>
+    <Panel height="h-[33.5rem] mt-[0.875rem] " top>
     <div className="mt-4 w-full">
       {friendData
         .slice(0, 5)

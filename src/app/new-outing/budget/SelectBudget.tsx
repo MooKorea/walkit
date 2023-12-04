@@ -12,10 +12,10 @@ export default function SelectBudget() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <Panel height="h-[510px] mt-4" top>
-      <div className="relative h-[308px] w-full flex flex-col pt-10 gap-8 items-center">
+    <Panel height="h-[31.875rem] mt-4" top>
+      <div className="relative h-[19.25rem] w-full flex flex-col pt-10 gap-8 items-center">
         <PiggyBank />
-        <div className="flex items-center gap-2 mb-[-8px] text-textPrimary">
+        <div className="flex items-center gap-2 mb-[-0.5rem] text-textPrimary">
           <EditIcon />
           Enter Custom
         </div>
@@ -26,12 +26,12 @@ export default function SelectBudget() {
           (toggle ? "saturate-0 pointer-events-none " : "")
         }
       >
-        <div className="text-[24px]">
-          <span className="font-RubikBold text-[36px]">${toggle ? "0" : values[0]}</span>
+        <div className="text-[1.5rem]">
+          <span className="font-RubikBold text-[2.25rem]">${toggle ? "0" : values[0]}</span>
           min
         </div>
-        <div className="text-[24px]">
-          <span className="font-RubikBold text-[36px]">${toggle ? "0" : values[1]}</span>
+        <div className="text-[1.5rem]">
+          <span className="font-RubikBold text-[2.25rem]">${toggle ? "0" : values[1]}</span>
           max
         </div>
       </div>

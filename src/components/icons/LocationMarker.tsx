@@ -11,8 +11,8 @@ export default function LocationMarker({ className, delay = 0, instant = false }
   return (
     <motion.svg
       xmlns="http://www.w3.org/2000/svg"
-      width="42"
-      height="42"
+      width="2.625rem"
+      height="2.625rem"
       fill="none"
       viewBox="0 0 42 42"
       className={"absolute " + className}

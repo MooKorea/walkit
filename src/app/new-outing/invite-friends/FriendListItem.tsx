@@ -11,26 +11,32 @@ interface FriendListItem {
   delay: number;
 }
 
-export default function FriendListItem({ name, online, profilePicture, delay }: FriendListItem) {
+export default function FriendListItem({
+  name,
+  online,
+  profilePicture,
+  delay,
+}: FriendListItem) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{delay: delay * 0.05}}
-      className="relative flex items-center gap-4 py-[10px] w-full px-8"
+      transition={{ delay: delay * 0.05 }}
+      className="relative flex items-center gap-4 py-[0.625rem] w-full px-8"
     >
-      <Image
-        className="rounded-full max-h-10"
-        src={profilePicture}
-        width={40}
-        height={40}
-        alt="friend profile picture"
-      />
+      <div className="relative w-[2.5rem] h-[2.5rem]">
+        <Image
+          className="rounded-full max-h-10"
+          src={profilePicture}
+          fill
+          alt="friend profile picture"
+        />
+      </div>
       <div className="grow">
         <div className="text-textPrimary">{name}</div>
         <div
           className={
-            "font-RubikMedium text-[14px] " +
+            "font-RubikMedium text-[0.875rem] " +
             (online ? "text-textTertiary " : "text-[#706A6A]")
           }
         >
@@ -51,11 +57,10 @@ function PlusButton() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="40"
-      height="40"
+      
       fill="none"
       viewBox="0 0 40 40"
-      className={"cursor-pointer " + (invite ? "saturate-0 pointer-events-none" : "")}
+      className={"w-[2.5rem] h-[2.5rem] cursor-pointer " + (invite ? "saturate-0 pointer-events-none" : "")}
       onClick={() => setInvite(true)}
     >
       <rect width="40" height="40" fill="#FFD170" rx="20"></rect>

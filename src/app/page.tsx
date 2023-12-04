@@ -5,11 +5,11 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main className="relative h-full flex flex-col items-center justify-center">
-      <Mountains className={"z-0 absolute top-[299px]"} />
-      <h1 className="mt-[155px] text-[64px] text-textTertiary font-RubikMedium">
+      <Mountains className={"z-0 absolute top-[18.688rem]"} />
+      <h1 className="mt-[9.688rem] text-[4rem] text-textTertiary font-RubikMedium">
         Walkit
       </h1>
-      <div className="relative flex flex-col gap-[10px] grow justify-end">
+      <div className="relative flex flex-col gap-[0.625rem] grow justify-end">
         <PanelButton top href="/register">
           <Image src="/mail-icon.png" width={27} height={27} alt="mail icon" />
           Continue with Email
@@ -27,9 +27,9 @@ export default function Home() {
           Continue with Google
         </PanelButton>
       </div>
-      <div className="text-textPrimary flex justify-center flex-col items-center my-12">
-        <div className="text-base">Already have an account?</div>
-        <div className="shadow-small font-RubikMedium mt-2 rounded-[20px] border-2 h-[34px] w-[132px] border-textPrimary flex items-center justify-center">Log In</div>
+      <div className="text-textPrimary text-base flex justify-center flex-col items-center my-12">
+        <div>Already have an account?</div>
+        <div className="shadow-small font-RubikMedium mt-2 rounded-[1.25rem] border-2 h-[2.125rem] w-[8.25rem] border-textPrimary flex items-center justify-center">Log In</div>
       </div>
     </main>
   );

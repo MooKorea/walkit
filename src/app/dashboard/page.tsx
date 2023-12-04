@@ -8,15 +8,15 @@ import Buttons from "./Buttons";
 
 export default function Dashboard() {
   return (
-    <main className="relative h-full flex flex-col items-center">
-      <Mountains className={"z-0 absolute top-[269px]"} />
-      <div className="mt-[54px] pr-5 text-base text-textPrimary w-full h-10 flex justify-end items-center gap-4">
+    <main className="fixed w-full h-full flex flex-col items-center">
+      <Mountains className={"z-0 absolute top-[16.813rem]"} />
+      <div className="mt-[3.375rem] pr-5 text-base text-textPrimary w-full h-10 flex justify-end items-center gap-4">
         William Smith
         <Image src={"/Profile-Pic.png"} height={40} width={40} alt="profile picture" />
       </div>
       <div className="flex flex-col w-panelWidth">
         Current Outing
-        <h1 className="mt-[-4px] font-RubikMedium text-[24px] flex gap-3">
+        <h1 className="mt-[-0.25rem] font-RubikMedium text-[1.5rem] flex gap-3">
           Minneapolis, MN
           <Image src={"/Sunny-Icon.png"} height={36} width={36} alt="Sunny Icon" />
         </h1>
@@ -29,23 +29,23 @@ export default function Dashboard() {
           </div>
           <div>
             <div className="text-textTertiary text-base leading-4 mt-8">
-              <span className="font-RubikMedium text-[36px]">60</span>% <br />
+              <span className="font-RubikMedium text-[2.25rem]">60</span>% <br />
               complete
             </div>
-            <div className="text-textPrimary mt-4">
+            <div className="text-textPrimary mt-4 text-base">
               <span className="font-RubikBold">7,340</span> steps
             </div>
-            <div className="text-[#737373]">
+            <div className="text-[#737373] text-base">
               <span className="font-RubikBold">2,660</span> until goal
             </div>
           </div>
         </div>
         <div className="flex flex-col gap-4 mt-6 mr-2">
-          <Button label="Details" width="w-[132px]" shadow icon={<InfoIcon />} />
+          <Button label="Details" width="w-[8.25rem]" shadow icon={<InfoIcon />} />
           <Button
             label="Continue"
-            width="w-[132px]"
-            height="h-[55px]"
+            width="w-[8.25rem]"
+            height="h-[3.438rem]"
             shadow
             highlight
             icon={<PlayIcon />}

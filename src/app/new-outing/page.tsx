@@ -8,13 +8,13 @@ export default function NewOuting() {
   return (
     <>
       <div className="flex flex-col w-panelWidth mt-6">
-        <h1 className="mt-[-4px] font-RubikMedium text-[24px] flex items-center gap-3">
+        <h1 className="mt-[-0.25rem] font-RubikMedium text-[1.5rem] flex items-center gap-3">
           Distance
           <QuestionMark />
         </h1>
         How far will you travel?
       </div>
-      <div className="flex flex-col gap-[10px]">
+      <div className="flex flex-col gap-[0.625rem]">
         <SelectDistance />
         <PanelButton bottom href="/new-outing/budget">
           Next

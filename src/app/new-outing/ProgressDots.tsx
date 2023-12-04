@@ -14,6 +14,6 @@ export default function ProgressDots({ progress }: ProgressDots) {
 
 function Dot({ active }: { active: boolean }) {
   return (
-    <div className={"w-[10px] h-[10px] rounded-full " + (active ? "bg-[#EF9E55]" : "bg-white")}></div>
+    <div className={"w-[0.625rem] h-[0.625rem] rounded-full " + (active ? "bg-[#EF9E55]" : "bg-white")}></div>
   );
 }

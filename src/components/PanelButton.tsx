@@ -25,19 +25,19 @@ export default function PanelButton({
   ...props
 }: PanelButton) {
   const white =
-    "relative before:rounded-[5px] before:bg-primary before:absolute before:h-full before:w-full before:shadow-panel ";
-  const yellow = "relative bg-secondary rounded-[5px] shadow-panel ";
+    "relative before:rounded-[0.313rem] before:bg-primary before:absolute before:h-full before:w-full before:shadow-panel ";
+  const yellow = "relative bg-secondary rounded-[0.313rem] shadow-panel ";
   return (
     <Link
       {...props}
       href={href}
       className={
-        "text-[20px] flex items-center justify-center " +
+        "text-[1.25rem] flex items-center justify-center " +
         (highlight ? yellow : white) +
-        (top ? "before:rounded-t-[20px] rounded-t-[20px] " : "") +
-        (bottom ? "before:rounded-b-[20px] rounded-b-[20px] " : "") +
-        (right ? "before:rounded-br-[20px] rounded-br-[20px] " : "") +
-        (left ? "before:rounded-bl-[20px] rounded-bl-[20px] " : "") +
+        (top ? "before:rounded-t-[1.25rem] rounded-t-[1.25rem] " : "") +
+        (bottom ? "before:rounded-b-[1.25rem] rounded-b-[1.25rem] " : "") +
+        (right ? "before:rounded-br-[1.25rem] rounded-br-[1.25rem] " : "") +
+        (left ? "before:rounded-bl-[1.25rem] rounded-bl-[1.25rem] " : "") +
         (split ? "w-full " : "w-panelWidth ") +
         (!!height ? `${height} ` : "h-buttonHeight ")
       }

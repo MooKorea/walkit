@@ -7,12 +7,12 @@ interface Heading {
 
 export default function Heading({ label, href }: Heading) {
   return (
-    <div className="flex items-end w-full h-[98px] bg-[#FCEDB3]">
+    <div className="fixed top-0 left-0 flex items-end w-full h-[6.125rem] bg-[#FCEDB3]">
       <div className="flex h-16">
         <Link className="pl-8 pr-5 h-full flex items-center" href={href}>
           <BackArrow />
         </Link>
-        <div className="text-textPrimary text-[18px] flex items-center" >
+        <div className="text-textPrimary text-[1.125rem] flex items-center" >
           {label}
         </div>
       </div>

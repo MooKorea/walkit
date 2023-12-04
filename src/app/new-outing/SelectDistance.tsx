@@ -15,10 +15,10 @@ export default function SelectDistance() {
 
   const multiplier = (values[0] + 2) * 80;
   return (
-    <Panel height="h-[510px] mt-4" top>
-      <div className="relative h-[308px] w-full overflow-hidden rounded-[20px]">
+    <Panel height="h-[31.875rem] mt-4" top>
+      <div className="relative h-[19.25rem] w-full overflow-hidden rounded-[1.25rem]">
         <Map />
-        <div className="absolute top-[140px] right-[155px] flex items-center justify-center">
+        <div className="absolute top-[8.75rem] right-[9.688rem] flex items-center justify-center">
           <NavigatorIcon noBg />
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
@@ -30,10 +30,10 @@ export default function SelectDistance() {
         </div>
       </div>
       <div className="flex w-panelWidth px-12 mt-8 mb-5 justify-between text-textPrimary">
-        <div className="text-[24px]">
-          <span className="font-RubikBold text-[36px]">{values}</span> mi
+        <div className="text-[1.5rem]">
+          <span className="font-RubikBold text-[2.25rem]">{values}</span> mi
         </div>
-        <div className="flex items-center gap-2 mb-[-8px]">
+        <div className="flex items-center gap-2 mb-[-0.5rem]">
           <EditIcon />
           Enter Custom
         </div>

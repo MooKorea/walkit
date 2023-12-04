@@ -20,7 +20,7 @@ interface Modal {
 export default function Modal({
   children,
   buttonLabel,
-  height = "h-[191px]",
+  height = "h-[11.938rem]",
   highlight = false,
   center = false,
   noClose = false,
@@ -44,7 +44,7 @@ export default function Modal({
       }
     );
     animate1(scope1.current, {
-      y: closed ? 20 : 0,
+      y: closed ? "1.5rem" : "-4rem",
     });
   }, [closed]);
 
@@ -53,7 +53,7 @@ export default function Modal({
       ref={scope}
       className="opacity-0 fixed w-full h-full z-10 flex flex-col items-center justify-center bg-white/[0.5]"
     >
-      <div ref={scope1} className="flex flex-col items-center justify-center gap-[10px]">
+      <div ref={scope1} className="flex flex-col items-center justify-center gap-[0.625rem]">
         <Panel height={(center ? "flex items-center justify-center " : "") + height} top>
           {children}
           {!noClose && (

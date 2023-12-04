@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 export default function Buttons() {
   return (
-    <div className="grow flex flex-col gap-[10px] justify-end pb-[110px]">
+    <div className="grow flex flex-col gap-[0.625rem] justify-end pb-[6.875rem]">
       <DashboardButton
         top
         label="New Outing"
@@ -58,7 +58,7 @@ function DashboardButton({
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: delay * 0.05 }}
     >
-      <PanelButton top={top} bottom={bottom} height="h-[91px]" href={href}>
+      <PanelButton top={top} bottom={bottom} height="h-[5.688rem]" href={href}>
         <div className="flex items-center w-panelWidth gap-4 pl-6 pr-8">
           {icon}
           <div className="grow">{label}</div>
