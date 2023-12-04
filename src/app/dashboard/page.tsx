@@ -12,13 +12,17 @@ export default function Dashboard() {
       <Mountains className={"z-0 absolute top-[16.813rem]"} />
       <div className="mt-[3.375rem] pr-5 text-base text-textPrimary w-full h-10 flex justify-end items-center gap-4">
         William Smith
-        <Image src={"/Profile-Pic.png"} height={40} width={40} alt="profile picture" />
+        <div className="relative w-[2.5rem] h-[2.5rem]">
+          <Image src={"/Profile-Pic.png"} fill alt="profile picture" />
+        </div>
       </div>
       <div className="flex flex-col w-panelWidth">
         Current Outing
         <h1 className="mt-[-0.25rem] font-RubikMedium text-[1.5rem] flex gap-3">
           Minneapolis, MN
-          <Image src={"/Sunny-Icon.png"} height={36} width={36} alt="Sunny Icon" />
+          <div className="relative w-[2.25rem] h-[2.25rem]">
+            <Image src={"/Sunny-Icon.png"} fill alt="Sunny Icon" />
+          </div>
         </h1>
       </div>
       <div className="flex w-panelWidth justify-between mt-3">

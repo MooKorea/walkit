@@ -28,8 +28,15 @@
   src: url("../fonts/Rubik-Bold.ttf");
 }
 
+
 html {
   font-size: calc(3.6vw);
+}
+
+@media (min-width: 415px) {
+  html {
+    font-size: 16px;
+  }
 }
 
 body {
