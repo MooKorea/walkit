@@ -13,7 +13,7 @@ export default function Navigation() {
   const pathname = usePathname();
 
   const white =
-    "before:rounded-t-[1.25rem] before:bg-primary before:absolute before:h-full before:w-full before:shadow-panel ";
+    "before:rounded-t-[1.25rem] before:backdrop-blur before:bg-primary before:absolute before:h-full before:w-full before:shadow-panel ";
 
   if (exclude.includes(pathname)) return null;
   return (

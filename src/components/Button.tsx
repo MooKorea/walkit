@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-interface Button {
+type Button = React.BaseHTMLAttributes<HTMLAnchorElement> & {
   shadow?: boolean;
   highlight?: boolean;
   label: string;
@@ -17,7 +17,8 @@ export default function Button({
   icon,
   height,
   width,
-  href = ""
+  href = "",
+  ...props
 }: Button) {
   return (
     <Link
@@ -30,6 +31,7 @@ export default function Button({
         (!!height ? `${height} ` : "h-[2.125rem] ") +
         (!!width ? `${width} ` : "px-5 ")
       }
+      {...props}
     >
       {icon}
       {label}
