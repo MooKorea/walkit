@@ -19,24 +19,18 @@ export default function LocationListItem({ data }: LocationListItem) {
     dollarAmount += "$";
   }
 
+  const date = new Date();
+  const time = 100 * (date.getHours() - 12) + date.getMinutes();
+  const isClosed = data.closeTime * 100 < time;
+
   return (
     <Panel height="h-[18.438rem]">
       <div className="w-full mt-3 px-3 flex gap-[0.563rem]">
         <div className="rounded-[0.438rem] overflow-hidden relative w-full h-[7.063rem]">
-          <Image
-            src={data.photo1}
-            fill
-            sizes="12rem"
-            alt="photo of bowling place"
-          />
+          <Image src={data.photo1} fill sizes="12rem" alt="photo of bowling place" />
         </div>
         <div className="rounded-[0.438rem] overflow-hidden relative w-full h-[7.063rem]">
-          <Image
-            src={data.photo2}
-            fill
-            sizes="12rem"
-            alt="photo of bowling place"
-          />
+          <Image src={data.photo2} fill sizes="12rem" alt="photo of bowling place" />
         </div>
       </div>
       <div className="w-full px-4 mt-3 text-[1.25rem]">{data.name}</div>
@@ -53,13 +47,19 @@ export default function LocationListItem({ data }: LocationListItem) {
               (data.distance < 0.7 ? "text-textTertiary" : "text-[#D18E00]")
             }
           >
-            {data.distance < 0.7 ? "Nearby" : "Far"}{" "}
+            {data.distance < 0.7 ? "Nearby " : "Far "}
           </span>
-          -{` ${data.distance} mi`}
+          {`- ${data.distance} mi`}
         </div>
         <div>
-          <span className="font-RubikMedium text-textTertiary">Open </span>-
-          Closes {data.closeTime}PM
+          <span
+            className={
+              "font-RubikMedium " + (isClosed ? "text-[#D18E00]" : "text-textTertiary")
+            }
+          >
+            {isClosed ? "Closed " : "Open "}
+          </span>
+          - Closes {data.closeTime} PM
         </div>
       </div>
       <Buttons />
@@ -72,9 +72,7 @@ function Buttons() {
   return (
     <div className="w-full px-4 my-3 flex gap-2">
       <Button label="Details" icon={<InfoIcon />} width="w-full"></Button>
-      <div
-        className={"w-full " + (added ? "saturate-0 pointer-events-none" : "")}
-      >
+      <div className={"w-full " + (added ? "saturate-0 pointer-events-none" : "")}>
         <Button
           label={added ? "Added" : "Add"}
           icon={<PlusIcon />}

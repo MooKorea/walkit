@@ -25,8 +25,8 @@ export default function PanelButton({
   ...props
 }: PanelButton) {
   const white =
-    "relative before:rounded-[0.313rem] before:bg-primary before:absolute before:h-full before:w-full before:shadow-panel ";
-  const yellow = "relative bg-secondary rounded-[0.313rem] shadow-panel ";
+    "relative before:active:opacity-60 before:transition-opacity before:rounded-[0.313rem] before:bg-primary before:absolute before:h-full before:w-full before:shadow-panel ";
+  const yellow = "active:opacity-60 transition-opacity relative bg-secondary rounded-[0.313rem] shadow-panel ";
   return (
     <Link
       {...props}

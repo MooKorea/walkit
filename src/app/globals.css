@@ -31,6 +31,7 @@
 
 html {
   font-size: calc(3.6vw);
+  -webkit-tap-highlight-color:  rgba(255, 255, 255, 0); 
 }
 
 @media (min-width: 415px) {
@@ -39,8 +40,8 @@ html {
   }
 }
 
-body {
 
+body {
   position: relative;
   font-family: "RubikRegular";
   font-size: 1rem;
