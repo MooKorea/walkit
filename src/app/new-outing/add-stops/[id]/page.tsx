@@ -14,6 +14,10 @@ export default function Page({ params }: { params: { id: string } }) {
   const data: LocationType = locationData.filter(
     (e) => e.name === params.id.replaceAll("%20", " ")
   )[0];
+
+  const [added, setAdded] = useState(false);
+  const [isSaved, setIsSaved] = useState(false);
+  
   if (data === undefined) {
     return (
       <>
@@ -30,9 +34,6 @@ export default function Page({ params }: { params: { id: string } }) {
   const date = new Date();
   const time = 100 * (date.getHours() - 12) + date.getMinutes();
   const isClosed = data.closeTime * 100 < time;
-
-  const [added, setAdded] = useState(false);
-  const [isSaved, setIsSaved] = useState(false);
 
   return (
     <>
