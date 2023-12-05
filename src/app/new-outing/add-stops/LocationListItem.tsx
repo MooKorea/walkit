@@ -8,12 +8,55 @@ import StarRating from "@/components/icons/StarRating";
 import Image from "next/image";
 import { LocationType } from "./locationData";
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 interface LocationListItem {
   data: LocationType;
+  delay: number;
 }
 
-export default function LocationListItem({ data }: LocationListItem) {
+export default function LocationListItem({ data, delay }: LocationListItem) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ delay: 0.3 + delay }}
+    >
+      <Panel height="h-[18.438rem]">
+        <Photos data={data} />
+        <Text data={data} />
+        <Buttons />
+      </Panel>
+    </motion.div>
+  );
+}
+
+function Photos({ data }: { data: LocationType }) {
+  return (
+    <div className="w-full mt-3 px-3 flex gap-[0.563rem]">
+      <div className="rounded-[0.438rem] overflow-hidden relative w-full h-[7.063rem]">
+        <Image
+          src={data.photo1}
+          fill
+          className="object-cover"
+          sizes="12rem"
+          alt="photo of bowling place"
+        />
+      </div>
+      <div className="rounded-[0.438rem] overflow-hidden relative w-full h-[7.063rem]">
+        <Image
+          src={data.photo2}
+          fill
+          className="object-cover"
+          sizes="12rem"
+          alt="photo of bowling place"
+        />
+      </div>
+    </div>
+  );
+}
+
+function Text({ data }: { data: LocationType }) {
   let dollarAmount = "";
   for (let i = 0; i < data.pricing; i++) {
     dollarAmount += "$";
@@ -22,17 +65,8 @@ export default function LocationListItem({ data }: LocationListItem) {
   const date = new Date();
   const time = 100 * (date.getHours() - 12) + date.getMinutes();
   const isClosed = data.closeTime * 100 < time;
-
   return (
-    <Panel height="h-[18.438rem]">
-      <div className="w-full mt-3 px-3 flex gap-[0.563rem]">
-        <div className="rounded-[0.438rem] overflow-hidden relative w-full h-[7.063rem]">
-          <Image src={data.photo1} fill sizes="12rem" alt="photo of bowling place" />
-        </div>
-        <div className="rounded-[0.438rem] overflow-hidden relative w-full h-[7.063rem]">
-          <Image src={data.photo2} fill sizes="12rem" alt="photo of bowling place" />
-        </div>
-      </div>
+    <>
       <div className="w-full px-4 mt-3 text-[1.25rem]">{data.name}</div>
       <div className="w-full px-4 mt-2 text-base flex items-center h-6 gap-2">
         <div>{data.starRating.toFixed(1)}</div>
@@ -62,8 +96,7 @@ export default function LocationListItem({ data }: LocationListItem) {
           - Closes {data.closeTime} PM
         </div>
       </div>
-      <Buttons />
-    </Panel>
+    </>
   );
 }
 

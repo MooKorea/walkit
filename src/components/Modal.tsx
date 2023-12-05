@@ -25,7 +25,7 @@ export default function Modal({
   center = false,
   noClose = false,
   setModalOpen,
-  href
+  href,
 }: Modal) {
   const [scope, animate] = useAnimate();
   const [scope1, animate1] = useAnimate();
@@ -38,14 +38,21 @@ export default function Modal({
       },
       {
         duration: 0.1,
+        delay: closed ? 0 : 0.12,
         onComplete() {
           if (closed) setModalOpen(false);
         },
       }
     );
-    animate1(scope1.current, {
-      y: closed ? "1.5rem" : "-4rem",
-    });
+    animate1(
+      scope1.current,
+      {
+        y: closed ? "1.5rem" : "-4rem",
+      },
+      {
+        delay: closed ? 0 : 0.12,
+      }
+    );
   }, [closed]);
 
   return (
@@ -53,7 +60,10 @@ export default function Modal({
       ref={scope}
       className="opacity-0 fixed w-full h-full z-10 flex flex-col items-center justify-center bg-white/[0.5]"
     >
-      <div ref={scope1} className="flex flex-col items-center justify-center gap-[0.625rem]">
+      <div
+        ref={scope1}
+        className="flex flex-col items-center justify-center gap-[0.625rem]"
+      >
         <Panel height={(center ? "flex items-center justify-center " : "") + height} top>
           {children}
           {!noClose && (

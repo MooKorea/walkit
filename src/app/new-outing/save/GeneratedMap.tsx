@@ -4,37 +4,13 @@ import Panel from "@/components/Panel";
 import LocationMarker from "@/components/icons/LocationMarker";
 import NavigatorIcon from "@/components/icons/NavigatorIcon";
 import Map from "@/components/Map";
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
+import Loader from "@/components/Loader";
 
 export default function GeneratedMap() {
-  const [isLoaded, setIsLoaded] = useState(false);
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoaded(true);
-    }, 3000);
-  }, []);
-
   return (
     <Panel height="h-[34.938rem] mt-[0.875rem] " top>
-      <AnimatePresence>
-        {isLoaded ? (
-          <MapContainer />
-        ) : (
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 20 }}
-            key={"loader"}
-            className="text-textPrimary mt-[12.5rem] flex flex-col justify-center items-center gap-4"
-          >
-            <div className="load-container">
-              <div className="loader">Loading...</div>
-            </div>
-            <div>Generating Route</div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <Loader time={3000} label="Generating Route..." render={<MapContainer />} />
     </Panel>
   );
 }

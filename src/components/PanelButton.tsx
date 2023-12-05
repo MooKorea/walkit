@@ -1,6 +1,7 @@
 "use client";
+
+import useButtonDelay from "@/hooks/useButtonDelay";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 type PanelButton = React.BaseHTMLAttributes<HTMLAnchorElement> & {
   top?: boolean;
@@ -27,18 +28,11 @@ export default function PanelButton({
   ...props
 }: PanelButton) {
   const white =
-    "relative before:active:opacity-60 before:transition-opacity before:rounded-[0.313rem] before:bg-primary before:absolute before:h-full before:w-full before:shadow-panel ";
+    "relative before:active:opacity-60 before:duration-75 before:transition-opacity before:rounded-[0.313rem] before:bg-primary before:absolute before:h-full before:w-full before:shadow-panel ";
   const yellow =
     "active:opacity-60 transition-opacity relative bg-secondary rounded-[0.313rem] shadow-panel ";
 
-  //adds small delay on clicks for a nicer effect
-  const router = useRouter();
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    setTimeout(() => {
-      router.push(href, {scroll: false});
-    }, 180);
-  };
+  const handleClick = useButtonDelay(href)
 
   return (
     <Link
@@ -47,7 +41,7 @@ export default function PanelButton({
       onClick={props.onClick ? props.onClick : handleClick}
       scroll={false}
       className={
-        "text-[1.25rem] flex items-center justify-center " +
+        "text-[1.25rem] flex items-center duration-75 justify-center " +
         (highlight ? yellow : white) +
         (top ? "before:rounded-t-[1.25rem] rounded-t-[1.25rem] " : "") +
         (bottom ? "before:rounded-b-[1.25rem] rounded-b-[1.25rem] " : "") +

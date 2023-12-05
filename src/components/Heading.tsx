@@ -1,6 +1,6 @@
 "use client";
+import useButtonDelay from "@/hooks/useButtonDelay";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 
 interface Heading {
   label: string;
@@ -9,20 +9,13 @@ interface Heading {
 }
 
 export default function Heading({ label, href, children }: Heading) {
-  //adds small delay on clicks for a nicer effect
-  const router = useRouter();
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-    e.preventDefault();
-    setTimeout(() => {
-      router.push(href);
-    }, 180);
-  };
+  const handleClick = useButtonDelay(href);
 
   return (
     <div className="fixed top-0 left-0 flex items-end w-full h-[6.125rem] bg-[#FCEDB3]">
       <div className="flex h-16 w-full">
         <Link
-          className="pl-8 pr-5 h-full flex items-center relative before:w-12 before:h-12 before:bg-textPrimary before:opacity-0 before:scale-0 active:before:opacity-30 active:before:scale-100 before:transition-all before:rounded-full before:absolute before:top-[0.4rem] before:right-[0.07rem]"
+          className="pl-8 pr-5 h-full flex duration-75 items-center relative before:w-12 before:h-12 before:bg-textPrimary before:opacity-0 before:scale-0 active:before:opacity-30 active:before:scale-100 before:transition-all before:rounded-full before:absolute before:top-[0.4rem] before:right-[0.07rem]"
           href={href}
           onClick={handleClick}
         >
