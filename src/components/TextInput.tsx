@@ -27,7 +27,7 @@ export default function TextInput({
         <input
           className={
             "placeholder:text-textPrimary placeholder:opacity-70 focus:placeholder:opacity-0 text-textPrimary pl-4 focus:outline-none w-full h-full bg-transparent " +
-            (search ? "pl-14" : "")
+            (search ? "pl-[3.5rem]" : "")
           }
           placeholder={search ? "Search" : placeholder}
           onChange={handleChange}
