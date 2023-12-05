@@ -15,7 +15,7 @@ export default function Heading({ label, href, children }: Heading) {
     e.preventDefault();
     setTimeout(() => {
       router.push(href);
-    }, 100);
+    }, 180);
   };
 
   return (

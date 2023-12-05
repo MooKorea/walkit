@@ -30,7 +30,7 @@ export default function Button({
     e.preventDefault();
     setTimeout(() => {
       router.push(href, {scroll: false});
-    }, 100);
+    }, 180);
   };
 
   return (
