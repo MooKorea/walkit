@@ -17,7 +17,7 @@ export default function AddStops() {
 
 function LocationsContainer() {
   return (
-    <div className="pt-5 pb-24 w-full flex flex-col gap-[1.313rem] items-center overflow-y-scroll">
+    <div className="pt-5 pb-[10rem] w-full flex flex-col gap-[1.313rem] items-center overflow-y-scroll">
       {recreationalBusinesses.map((e, i) => {
         return <LocationListItem data={e} key={i} delay={i * 0.1} />;
       })}
