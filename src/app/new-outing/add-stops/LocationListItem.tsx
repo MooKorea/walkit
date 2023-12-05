@@ -6,7 +6,7 @@ import InfoIcon from "@/components/icons/InfoIcon";
 import PlusIcon from "@/components/icons/PlusIcon";
 import StarRating from "@/components/icons/StarRating";
 import Image from "next/image";
-import { LocationType } from "./locationData";
+import { LocationType } from "../../../data/locationData";
 import { useState } from "react";
 import { motion } from "framer-motion";
 
@@ -25,7 +25,7 @@ export default function LocationListItem({ data, delay }: LocationListItem) {
       <Panel height="h-[18.438rem]">
         <Photos data={data} />
         <Text data={data} />
-        <Buttons />
+        <Buttons data={data} />
       </Panel>
     </motion.div>
   );
@@ -100,11 +100,11 @@ function Text({ data }: { data: LocationType }) {
   );
 }
 
-function Buttons() {
+function Buttons({ data }: { data: LocationType }) {
   const [added, setAdded] = useState(false);
   return (
     <div className="w-full px-4 my-3 flex gap-2">
-      <Button label="Details" icon={<InfoIcon />} width="w-full"></Button>
+      <Button label="Details" icon={<InfoIcon />} width="w-full" href={`/new-outing/add-stops/${data.name}`} />
       <div className={"w-full " + (added ? "saturate-0 pointer-events-none" : "")}>
         <Button
           label={added ? "Added" : "Add"}
@@ -112,7 +112,7 @@ function Buttons() {
           highlight
           width="w-full"
           onClick={() => setAdded(true)}
-        ></Button>
+        />
       </div>
     </div>
   );

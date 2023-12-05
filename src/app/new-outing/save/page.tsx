@@ -27,7 +27,7 @@ export default function Save() {
           <PanelButton split left onClick={() => setModalOpen(true)}>
             Save for Later
           </PanelButton>
-          <PanelButton split right highlight href="">
+          <PanelButton split right highlight href="/map">
             Start Now!
           </PanelButton>
         </div>

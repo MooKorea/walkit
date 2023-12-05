@@ -4,7 +4,7 @@
 
 :root {
   --primary: rgba(255, 255, 255, 0.8);
-  --secondary: #ffd170;
+  --secondary: hsl(41, 100%, 72%);
   --tertiary: #a4f4da;
   --inputBackground: #ffecc5;
   --inputForeground: #fab577;

@@ -17,7 +17,7 @@ export default function SelectDistance() {
   return (
     <Panel height="h-[31.875rem] mt-4" top>
       <div className="relative h-[19.25rem] w-full overflow-hidden rounded-[1.25rem]">
-        <Map />
+        <Map className="w-[110rem] absolute right-[-32rem] top-[-30rem]" />
         <div className="absolute top-[8.75rem] right-[9.688rem] flex items-center justify-center">
           <NavigatorIcon noBg />
           <motion.div

@@ -2,7 +2,7 @@ import Panel from "@/components/Panel";
 import PanelButton from "@/components/PanelButton";
 import Arrow from "@/components/icons/Arrow";
 import QuestionMark from "@/components/icons/QuestionMark";
-import { friendData } from "./friendData";
+import { friendData } from "../../../data/friendData";
 import FriendListItem from "./FriendListItem";
 import ProgressDots from "../ProgressDots";
 import Heading from "@/components/Heading";

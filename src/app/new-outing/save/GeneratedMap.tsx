@@ -21,14 +21,14 @@ function MapContainer() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0.5 }}
-      className="w-full overflow-hidden"
+      className="w-full h-full overflow-hidden relative"
     >
-      <Map fullPath />
+      <Map fullPath className="w-[90rem] absolute right-[-35rem] top-[-13.5rem]" />
       <NavigatorIcon className="absolute top-[7.5rem] left-[6.25rem]" />
       <LocationMarker className="top-[16.875rem] left-[3.438rem]" />
       <LocationMarker delay={1} className="top-[25.313rem] left-[7.188rem]" />
-      <LocationMarker delay={2} className="top-[18.125rem] left-[15.625rem]" />
-      <LocationMarker delay={3} className="top-[6.563rem] left-[16.875rem]" />
+      <LocationMarker delay={2} className="top-[18.125rem] left-[16.625rem]" />
+      <LocationMarker delay={3} className="top-[5.563rem] left-[17.875rem]" />
     </motion.div>
   );
 }
