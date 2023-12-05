@@ -6,15 +6,16 @@ import PlusIcon from "@/components/icons/PlusIcon";
 import StarRating from "@/components/icons/StarRating";
 import { locationData } from "@/data/locationData";
 import Image from "next/image";
-import { useState, memo } from "react";
+import { useState } from "react";
 import { LocationType } from "@/data/locationData";
 import Alert from "@/components/Alert";
+import Photos from "./Photos";
 
 export default function Page({ params }: { params: { id: string } }) {
   const data: LocationType = locationData.filter(
     (e) => e.name === params.id.replaceAll("%20", " ")
   )[0];
-
+    
   const [added, setAdded] = useState(false);
   const [isSaved, setIsSaved] = useState(false);
   
@@ -120,35 +121,5 @@ function StarIcon({ isSaved, setIsSaved }: StarIcon) {
         d="M15.667 3.256a1 1 0 011.666 0l3.99 6.012a1 1 0 00.564.41l6.951 1.937a1 1 0 01.515 1.585l-4.485 5.652a1 1 0 00-.216.664l.307 7.209a1 1 0 01-1.348.98l-6.762-2.52a1 1 0 00-.698 0l-6.762 2.52a1 1 0 01-1.348-.98l.307-7.21a1 1 0 00-.216-.663L3.647 13.2a1 1 0 01.515-1.585l6.95-1.936a1 1 0 00.566-.41l3.989-6.013z"
       ></path>
     </svg>
-  );
-}
-
-const Photos = memo(({ data }: { data: LocationType }) => {
-  return (
-    <div className="flex flex-col gap-[0.4rem]">
-      <div className="flex gap-[0.4rem]">
-        <Photo src={data.photo1 + `&${Math.random()}`} />
-        <Photo src={data.photo2 + `&${Math.random()}`} />
-        <Photo src={data.photo1 + `&${Math.random()}`} />
-      </div>
-      <div className="flex gap-[0.4rem]">
-        <Photo src={data.photo2 + `&${Math.random()}`} />
-        <Photo src={data.photo1 + `&${Math.random()}`} />
-        <Photo src={data.photo2 + `&${Math.random()}`} />
-      </div>
-      <div className="flex gap-[0.4rem]">
-        <Photo src={data.photo1 + `&${Math.random()}`} />
-        <Photo src={data.photo2 + `&${Math.random()}`} />
-        <Photo src={data.photo1 + `&${Math.random()}`} />
-      </div>
-    </div>
-  );
-});
-
-function Photo({ src }: { src: string }) {
-  return (
-    <div className="relative w-[7.9rem] h-[7.9rem] bg-secondary overflow-hidden rounded-[0.313rem]">
-      <Image src={src} fill sizes="7.9rem" alt="photo of destination" />
-    </div>
   );
 }
