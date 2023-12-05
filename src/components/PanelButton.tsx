@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type PanelButton = React.BaseHTMLAttributes<HTMLAnchorElement> & {
   top?: boolean;
@@ -26,11 +28,23 @@ export default function PanelButton({
 }: PanelButton) {
   const white =
     "relative before:active:opacity-60 before:transition-opacity before:rounded-[0.313rem] before:bg-primary before:absolute before:h-full before:w-full before:shadow-panel ";
-  const yellow = "active:opacity-60 transition-opacity relative bg-secondary rounded-[0.313rem] shadow-panel ";
+  const yellow =
+    "active:opacity-60 transition-opacity relative bg-secondary rounded-[0.313rem] shadow-panel ";
+
+  //adds small delay on clicks for a nicer effect
+  const router = useRouter();
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    setTimeout(() => {
+      router.push(href, {scroll: false});
+    }, 100);
+  };
+
   return (
     <Link
       {...props}
       href={href}
+      onClick={props.onClick ? props.onClick : handleClick}
       scroll={false}
       className={
         "text-[1.25rem] flex items-center justify-center " +
