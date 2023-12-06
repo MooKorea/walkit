@@ -47,7 +47,7 @@ export default function Page() {
             height="h-[11.938rem] mt-20"
             href="/results"
           >
-            <div className="absolute top-[-2rem] w-[9.063rem] h-[9.063rem]">
+            <div className="absolute top-[-2rem] left-[9.1rem] w-[9.063rem] h-[9.063rem]">
                 <Image src="/partyIcon.png" fill sizes="9.063rem" alt="party icon"/>
             </div>
             <div className="absolute bottom-[2rem] text-textPrimary font-RubikMedium text-2xl">Outing Complete!</div>

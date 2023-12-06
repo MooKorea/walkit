@@ -53,6 +53,7 @@ export default function Dashboard() {
             shadow
             highlight
             icon={<PlayIcon />}
+            href="/map"
           />
         </div>
       </div>
