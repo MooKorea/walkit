@@ -68,10 +68,12 @@ interface StatItem {
 
 function StatItem({ icon, number, label, points, noLine = false }: StatItem) {
   return (
-    <div className="relative flex gap-6 w-full px-8 py-4">
+    <div className="relative flex items-center gap-6 w-full px-8 py-4">
       {icon}
       <div className="grow">
-        <div className="font-RubikBold text-[1.25rem] text-textPrimary">{number.toLocaleString()}</div>
+        <div className="font-RubikBold text-[1.25rem] text-textPrimary">
+          {number.toLocaleString()}
+        </div>
         <div className="font-RubikMedium text-[0.875rem] text-[#86888D]">{label}</div>
       </div>
       <div className="flex gap-2 items-center font-RubikBold text-base text-textTertiary">

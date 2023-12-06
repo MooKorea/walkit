@@ -18,30 +18,30 @@ export function Sparkles({ big = false }: { big?: boolean }) {
 }
 
 export function LocationIcon() {
-    return (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="1.9rem"
-          height="2.25rem"
-          fill="none"
-          viewBox="0 0 28 36"
-        >
-          <path
-            stroke="#A17A4F"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M22.485 24.985l-6.364 6.365a2.996 2.996 0 01-4.24 0l-6.366-6.365a12 12 0 1116.97 0v0z"
-          ></path>
-          <path
-            stroke="#A17A4F"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M17.182 19.682a4.5 4.5 0 10-6.364-6.364 4.5 4.5 0 006.364 6.364z"
-          ></path>
-        </svg>
-      );
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1.9rem"
+      height="2.25rem"
+      fill="none"
+      viewBox="0 0 28 36"
+    >
+      <path
+        stroke="#A17A4F"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M22.485 24.985l-6.364 6.365a2.996 2.996 0 01-4.24 0l-6.366-6.365a12 12 0 1116.97 0v0z"
+      ></path>
+      <path
+        stroke="#A17A4F"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M17.182 19.682a4.5 4.5 0 10-6.364-6.364 4.5 4.5 0 006.364 6.364z"
+      ></path>
+    </svg>
+  );
 }
 
 export function FootprintIcon() {
@@ -63,21 +63,21 @@ export function FootprintIcon() {
 }
 
 export function FactsIcon() {
-    return (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="1.875rem"
-        height="1.875rem"
-        fill="none"
-        viewBox="0 0 30 30"
-      >
-        <path
-          stroke="#A17A4F"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M16.556 21.222H15V15h-1.556M15 8.778h.016M29 15a14 14 0 11-28 0 14 14 0 0128 0z"
-        ></path>
-      </svg>
-    );
-  }
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="1.875rem"
+      height="1.875rem"
+      fill="none"
+      viewBox="0 0 30 30"
+    >
+      <path
+        stroke="#A17A4F"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M16.556 21.222H15V15h-1.556M15 8.778h.016M29 15a14 14 0 11-28 0 14 14 0 0128 0z"
+      ></path>
+    </svg>
+  );
+}
