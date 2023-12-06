@@ -15,7 +15,7 @@ export default function Save() {
       <Heading label="New Outing" href="/dashboard">
         <Button label="Add Stops" href="/new-outing/add-stops" />
       </Heading>
-      <div className="flex flex-col w-panelWidth mt-6">
+      <div className="mt-4 flex flex-col w-panelWidth">
         <h1 className="mt-[-0.25rem] font-RubikMedium text-[1.5rem] flex items-center gap-3">
           Your Route
         </h1>

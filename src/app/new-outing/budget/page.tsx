@@ -9,7 +9,7 @@ export default function Budget() {
   return (
     <>
       <Heading label="New Outing" href="/dashboard" />
-      <div className="flex flex-col w-panelWidth">
+      <div className="mt-4 flex flex-col w-panelWidth">
         <h1 className="mt-[-0.25rem] font-RubikMedium text-[1.5rem] flex items-center gap-3">
           Budget
           <QuestionMark />

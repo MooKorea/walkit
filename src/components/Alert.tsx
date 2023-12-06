@@ -35,7 +35,7 @@ export default function Alert({ label }: Alert) {
   return (
     <div
       ref={scope}
-      className="opacity-0 fixed w-full flex justify-center top-[8rem] pointer-events-none z-20 text-base"
+      className="opacity-0 fixed w-full flex justify-center top-[6rem] pointer-events-none z-20 text-base"
     >
       <div className="bg-white backdrop-blur px-4 py-2 rounded-full">{label}</div>
     </div>
