@@ -12,7 +12,7 @@ export default function Heading({ label, href, children }: Heading) {
   const handleClick = useButtonDelay(href);
 
   return (
-    <div className="fixed top-0 left-0 flex items-end w-full h-[6.125rem] bg-[#FCEDB3]">
+    <div className="fixed top-0 left-0 flex items-end w-full h-[4.125rem] bg-[#FCEDB3]">
       <div className="flex h-16 w-full">
         <Link
           className="pl-8 pr-5 h-full flex duration-75 items-center relative before:w-12 before:h-12 before:bg-textPrimary before:opacity-0 before:scale-0 active:before:opacity-30 active:before:scale-100 before:transition-all before:rounded-full before:absolute before:top-[0.4rem] before:right-[0.07rem]"

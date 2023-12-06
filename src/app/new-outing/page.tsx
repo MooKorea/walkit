@@ -9,7 +9,7 @@ export default function NewOuting() {
   return (
     <>
       <Heading label="New Outing" href="/dashboard" />
-      <div className="flex flex-col w-panelWidth mt-6">
+      <div className="flex flex-col w-panelWidth">
         <h1 className="mt-[-0.25rem] font-RubikMedium text-[1.5rem] flex items-center gap-3">
           Distance
           <QuestionMark />

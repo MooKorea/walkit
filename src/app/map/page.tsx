@@ -27,7 +27,7 @@ export default function Page() {
 
   return (
     <>
-      <div className="fixed h-[6.625rem] z-10 w-full flex items-end pb-2 px-4 backdrop-blur bg-primary">
+      <div className="fixed h-[3.625rem] z-10 w-full flex items-end pb-2 px-4 backdrop-blur bg-primary">
         <TextInput width="w-full" search />
       </div>
       <div className="h-full w-full bg-white z-[-1]">

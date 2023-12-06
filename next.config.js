@@ -6,9 +6,9 @@ const nextConfig = {
 module.exports = nextConfig;
 
 const withPWA = require('next-pwa')({
-  dest: 'public'
+  dest: 'public',
 })
 
 module.exports = withPWA({
-  // next.js config
+  images: { remotePatterns: [{ protocol: "https", hostname: "source.unsplash.com" }] },
 })
