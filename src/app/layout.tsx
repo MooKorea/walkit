@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import Image from "next/image";
 import Navigation from "@/components/navigation/Navigation";
@@ -10,7 +10,13 @@ export const metadata: Metadata = {
   appleWebApp: true,
   formatDetection: {telephone: false},
   manifest: "/manifest.json",
+  themeColor: "white"
 };
+
+export const viewport:Viewport = {
+  width: 1,
+  themeColor: 'light'
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
